@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "32fa9952-4542-4c2d-8cf6-67af61de52fb",
+		"name": "Alura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2957976"
+	},
+	"item": [
+		{
+			"name": "Buscando Todos - Livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscando Todos - Autores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarPorEditora",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/busca?editora=Europa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"busca"
+					],
+					"query": [
+						{
+							"key": "editora",
+							"value": "Europa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscando por id - Livro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/livros/65543e7a48bfd6723b259d9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"65543e7a48bfd6723b259d9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criando um novo - Livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"titulo\": \"O Silmarillion\",\n\"autor\": \"65566e723b4e9d26d5cda449\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criando um novo - Autor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"nome\": \"JRR Tolkien\",\n\"nacionalidade\": \"África do Sul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/autores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizando - Livro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"editora\": \"Europa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/livros/65543e7a48bfd6723b259d9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"65543e7a48bfd6723b259d9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagando por id - Livro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/livros/65569ea9f6f5a2635f394415",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"livros",
+						"65569ea9f6f5a2635f394415"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
