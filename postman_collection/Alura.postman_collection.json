@@ -90,7 +90,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/livros/65543e7a48bfd6723b259d9a",
+					"raw": "http://localhost:3000/livros/655393fa905f75166d4ce4af",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -98,7 +98,39 @@
 					"port": "3000",
 					"path": [
 						"livros",
-						"65543e7a48bfd6723b259d9a"
+						"655393fa905f75166d4ce4af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscando por id - Autor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/autores/65566e723b4e9d26d5cda446",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						"65566e723b4e9d26d5cda446"
 					]
 				}
 			},
@@ -111,7 +143,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"titulo\": \"O Silmarillion\",\n\"autor\": \"65566e723b4e9d26d5cda449\"\n}",
+					"raw": "{\n\"titulo\": \"O Silmarillion\",\n\"editora\": \"Classicos\",\n\"preco\": 110,\n\"paginas\": 530,\n\"autor\": \"65566e723b4e9d26d5cda449\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -195,7 +227,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros/65569ea9f6f5a2635f394415",
+					"raw": "http://localhost:3000/livros/6556a0dbfc784a9d36e7ce1d",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -203,7 +235,7 @@
 					"port": "3000",
 					"path": [
 						"livros",
-						"65569ea9f6f5a2635f394415"
+						"6556a0dbfc784a9d36e7ce1d"
 					]
 				}
 			},

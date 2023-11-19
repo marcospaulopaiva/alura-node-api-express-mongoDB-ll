@@ -5,15 +5,15 @@ import routes from "./routes/index.js";
 const conexao = await conectaNaDatabase();
 
 conexao.on("error", (erro) => {
-    console.error("erro de conexão", erro);
+  console.error("erro de conexão", erro);
 });
 
 conexao.once("open", () => {
-    console.log("Conexao com o banco feita com sucesso!");
-})
+  console.log("Conexao com o banco feita com sucesso!");
+});
 
 const app = express();
+app.use(express.json());
 routes(app);
 
 export default app; 
-
