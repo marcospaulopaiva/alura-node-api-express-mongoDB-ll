@@ -1,5 +1,5 @@
 import ErroNaoEncontrado from "../erros/ErroNaoEncontrado.js";
-import { autor } from "../models/Autor.js";
+import { autor } from "../models/index.js";
 
 
 class AutorController {
