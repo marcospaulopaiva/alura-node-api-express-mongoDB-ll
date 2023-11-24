@@ -1,13 +1,15 @@
 import ErroNaoEncontrado from "../erros/ErroNaoEncontrado.js";
 import { autor } from "../models/index.js";
 
-
 class AutorController {
 
   static async listarAutores (req, res, next) {
     try {
-      const listaAutores = await autor.find({});
-      res.status(200).json(listaAutores);            
+      const buscarAutores = autor.find();
+
+      req.resultado = buscarAutores;
+
+      next();
     } catch (erro) {
       next(erro);
     }

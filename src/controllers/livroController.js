@@ -5,11 +5,11 @@ class LivroController {
 
   static async listarLivros (req, res, next) {
     try {
-      const listaLivros = await livros
-        .find({})
-        .populate("autor");
+      const buscarLivros = livros.find();
 
-      res.status(200).json(listaLivros);            
+      req.resultado = buscarLivros;
+
+      next();
     } catch (erro) {
       next(erro);
     }
@@ -19,7 +19,7 @@ class LivroController {
     try {
       const id = req.params.id;
       const livroEncontrado = await livros
-        .findById(id)
+        .findById(id, {}, { autopopulate: false })
         .populate("autor");
 
       if (livroEncontrado !== null) {
@@ -83,20 +83,13 @@ class LivroController {
   static async listarLivrosPorFiltro (req, res, next) {
     try {
       const busca = await processaBusca(req.query);
+      
+      const livrosResultado = livros
+        .find(busca);
 
+      req.resultado = livrosResultado;
       
-      const livrosResultado = await livros
-        .find(busca)
-        .populate("autor");
-      
-      console.log(livrosResultado);
-      
-      if (livrosResultado.length > 0) {
-        res.status(200).json(livrosResultado);
-      }
-      else {
-        res.status(200).json({message: "Nenhum livro foi encontrado.", status: 200});                      
-      }
+      next();
 
     } catch (erro) {
       next(erro);

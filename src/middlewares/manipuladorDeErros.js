@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import ErroBase from "../erros/ErroBase.js";
 import ErroRequisicao from "../erros/ErroRequisicao.js";
 import ErroValidacao from "../erros/ErroValidacao.js";
-import ErroNaoEncontrado from "../erros/ErroNaoEncontrado.js";
 
 // eslint-disable-next-line no-unused-vars
 function manipuladorDeErros(erro, req, res, next) {
@@ -14,7 +13,7 @@ function manipuladorDeErros(erro, req, res, next) {
   else if(erro instanceof mongoose.Error.ValidationError){
     new ErroValidacao(erro).enviarResposta(res);   
   } 
-  else if (erro instanceof ErroNaoEncontrado) {
+  else if (erro instanceof ErroBase) {
     erro.enviarResposta(res);
   }
   else {

@@ -12,15 +12,46 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros/",
+					"raw": "http://localhost:3000/livros",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"livros",
-						""
+						"livros"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limite",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "campoOrdenacao",
+							"value": "titulo",
+							"disabled": true
+						},
+						{
+							"key": "ordem",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "ordenacao",
+							"value": "_id:1",
+							"disabled": true
+						},
+						{
+							"key": "ordenacao",
+							"value": "titulo:1",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -32,15 +63,20 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/autores/",
+					"raw": "http://localhost:3000/autores?limite=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"autores",
-						""
+						"autores"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "1"
+						}
 					]
 				}
 			},
@@ -52,7 +88,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros/busca?editora=Europa&titulo=O Silmarillion&minPaginas=200&maxPaginas=600&nomeAutor=Marcos Paulo",
+					"raw": "http://localhost:3000/livros/busca",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -65,23 +101,28 @@
 					"query": [
 						{
 							"key": "editora",
-							"value": "Europa"
+							"value": "Europa",
+							"disabled": true
 						},
 						{
 							"key": "titulo",
-							"value": "O Silmarillion"
+							"value": "O Silmarillion",
+							"disabled": true
 						},
 						{
 							"key": "minPaginas",
-							"value": "200"
+							"value": "200",
+							"disabled": true
 						},
 						{
 							"key": "maxPaginas",
-							"value": "600"
+							"value": "600",
+							"disabled": true
 						},
 						{
 							"key": "nomeAutor",
-							"value": "Marcos Paulo"
+							"value": "Marcos Paulo",
+							"disabled": true
 						}
 					]
 				}
@@ -159,7 +200,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"titulo\": \"Rambo 2 - A missão\",\n\"editora\": \"Alura\",\n\"preco\": 110,\n\"paginas\": 5000,\n\"autor\": \"655cd86d6d0bbb191134ac0b\"\n}",
+					"raw": "{\n\"titulo\": \"Assembly: a Organização Multitudinária do Comum\",\n\"editora\": \"Alura\",\n\"preco\": 110,\n\"paginas\": 5000,\n\"autor\": \"655cd86d6d0bbb191134ac0b\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
