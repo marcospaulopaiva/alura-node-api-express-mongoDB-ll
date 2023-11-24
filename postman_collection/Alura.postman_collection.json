@@ -47,12 +47,12 @@
 			"response": []
 		},
 		{
-			"name": "BuscarPorEditora",
+			"name": "BuscarPorFiltro",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros/busca?editora=Europa",
+					"raw": "http://localhost:3000/livros/busca?editora=Europa&titulo=O Silmarillion&minPaginas=200&maxPaginas=600&nomeAutor=Marcos Paulo",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -66,6 +66,22 @@
 						{
 							"key": "editora",
 							"value": "Europa"
+						},
+						{
+							"key": "titulo",
+							"value": "O Silmarillion"
+						},
+						{
+							"key": "minPaginas",
+							"value": "200"
+						},
+						{
+							"key": "maxPaginas",
+							"value": "600"
+						},
+						{
+							"key": "nomeAutor",
+							"value": "Marcos Paulo"
 						}
 					]
 				}
@@ -90,7 +106,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/livros/655393fa905f75166d4ce4af",
+					"raw": "http://localhost:3000/livros/65595f93cd2c2564e6534595",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -98,7 +114,7 @@
 					"port": "3000",
 					"path": [
 						"livros",
-						"655393fa905f75166d4ce4af"
+						"65595f93cd2c2564e6534595"
 					]
 				}
 			},
@@ -122,7 +138,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/autores/65566e723b4e9d26d5cda446",
+					"raw": "http://localhost:3000/autores/655cd86d6d0bbb191134ac0b",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -130,7 +146,7 @@
 					"port": "3000",
 					"path": [
 						"autores",
-						"65566e723b4e9d26d5cda446"
+						"655cd86d6d0bbb191134ac0b"
 					]
 				}
 			},
@@ -143,7 +159,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"titulo\": \"O Silmarillion\",\n\"editora\": \"Classicos\",\n\"preco\": 110,\n\"paginas\": 530,\n\"autor\": \"65566e723b4e9d26d5cda449\"\n}",
+					"raw": "{\n\"titulo\": \"Rambo 2 - A missão\",\n\"editora\": \"Alura\",\n\"preco\": 110,\n\"paginas\": 5000,\n\"autor\": \"655cd86d6d0bbb191134ac0b\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -171,7 +187,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"nome\": \"JRR Tolkien\",\n\"nacionalidade\": \"África do Sul\"\n}",
+					"raw": "{\n    \"nome\": \"Marcos Paulo\",\n    \"nacionalidade\": \"America do Sul\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -222,12 +238,41 @@
 			"response": []
 		},
 		{
+			"name": "Atualizando - Autor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nacionalidade\": \"África do Sul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/autores/65566e723b4e9d26d5cda449",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						"65566e723b4e9d26d5cda449"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Apagando por id - Livro",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/livros/6556a0dbfc784a9d36e7ce1d",
+					"raw": "http://localhost:3000/livros/655bf7060c2ff9caeb24cb92",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -235,7 +280,27 @@
 					"port": "3000",
 					"path": [
 						"livros",
-						"6556a0dbfc784a9d36e7ce1d"
+						"655bf7060c2ff9caeb24cb92"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagando por id - Autor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/autores/655bebfa2cf3ce888b0aae31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autores",
+						"655bebfa2cf3ce888b0aae31"
 					]
 				}
 			},
